@@ -18,7 +18,7 @@ export function Header() {
     <header>
       <h1>Notes</h1>
       <div className="addNotes">
-        <Search color="#fff" onClick={changeState} />
+        <Search color="#fff" onClick={changeState} className="hover"/>
       </div>
     </header>
   );

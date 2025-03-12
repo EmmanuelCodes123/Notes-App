@@ -46,6 +46,7 @@ export function NoteForm() {
             height: "6rem",
             display: "flex",
             columnGap: "1rem",
+            
           }}
         >
           {Array.from({ length: 4 }, (_, i) => i + 1).map((num) => (
@@ -55,7 +56,7 @@ export function NoteForm() {
                 width: "25%",
                 height: "100%",
                 backgroundColor: `${colors[num]}`,
-
+                borderRadius: '10rem'
               }}
               onClick={() => {
                 setColor(colors[num]);

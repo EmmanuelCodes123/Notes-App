@@ -8,15 +8,14 @@ export function SearchFunction({ deleteNoteFunction }) {
   const [search, setSearch] = useState("");
   const [searchedNotes, setSearchedNotes] = useState([]);
   const { handleNavigate } = useCustomNavigate();
-  const [path, setPath] = useState("/search");
 
   function runSearch(e) {
     setSearch(e.target.value);
-    const matchedNotes = notes.filter((note) =>
+    let matchedNotes = notes.filter((note) =>
       note.title.toLowerCase().includes(search.toLowerCase())
     );
     setSearchedNotes(matchedNotes);
-    console.log(matchedNotes);
+    
   }
 
   return (
@@ -24,7 +23,7 @@ export function SearchFunction({ deleteNoteFunction }) {
       <div className="inputBox">
         <button
           onClick={() => handleNavigate(-1)}
-          style={{ width: "fit-content" }}
+          style={{ width: "fit-content", marginLeft: "2rem" }}
           className="hover icon"
           type="button"
         >
@@ -33,7 +32,12 @@ export function SearchFunction({ deleteNoteFunction }) {
 
         <input value={search} onChange={runSearch} />
       </div>
-      <div className="searchedNotes">
+      <div
+        className="searchedNotes"
+        style={{
+          width: "50rem",
+        }}
+      >
         {searchedNotes.map((note, i) => (
           <div
             key={i}
@@ -41,13 +45,20 @@ export function SearchFunction({ deleteNoteFunction }) {
             style={{
               marginTop: "2rem",
               display: "flex",
-              justifyContent: "center",
+              justifyContent: "spaceBetween",
             }}
           >
             <div
-              style={{ color: "#fff", marginRight: "20rem" }}
+              style={{
+                color: "#fff",
+                justifyContent: "flex-end",
+                display: "flex",
+                flexDirection: "column",
+                width: '80%'
+              }}
               onClick={() => {
                 handleNavigate(`/readNote/${note.id}`);
+                console.log('at once')
               }}
             >
               <h1 style={{ fontSize: " 2rem" }}>{note.title}</h1>
@@ -65,13 +76,18 @@ export function SearchFunction({ deleteNoteFunction }) {
             >
               <Edit
                 onClick={() => {
-                  setPath(`/edit/${note.id}`);
+                  handleNavigate(`/edit/${note.id}`);
                 }}
+                className="hover"
               />
               <Trash
                 onClick={() => {
                   deleteNoteFunction(note.id);
+                  setSearchedNotes(
+                    searchedNotes.filter((notes) => notes.id !== note.id)
+                  );
                 }}
+                className="hover"
               />
             </div>
           </div>

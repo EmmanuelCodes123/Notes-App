@@ -32,11 +32,6 @@ function App() {
       );
       return;
     }
-    if (action === "delete") {
-      setNotes((cur) => {
-        cur.map((n) => (n.id === note.id ? { ...n, title: "", body: "" } : n));
-      });
-    }
     setNotes((cur) => [...cur, note]);
   }
   return (

@@ -25,7 +25,7 @@ export function EditNote() {
     handleSetNotes({id: Number(noteId), title, body, color},'edit');
     console.log(color);
     
-    handleNavigate(-1)
+    handleNavigate('/')
   }
 
   return (
@@ -56,7 +56,7 @@ export function EditNote() {
                 width: "25%",
                 height: "100%",
                 backgroundColor: `${colors[num]}`,
-
+                borderRadius: '10rem'
               }}
               onClick={() => {
                 setColor(colors[num]);

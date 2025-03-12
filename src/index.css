@@ -221,6 +221,10 @@ button {
   height: 4rem;
   border-radius: 1rem;
 }
+.searchedNotes{
+  width: 60rem;
+  
+}
 .inputBox{
   width: 100%;
   height: 6rem;
