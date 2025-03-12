@@ -15,7 +15,7 @@ export function Header() {
   }
 
   return (
-    <header>
+    <header style={{zIndex: '1000', backgroundColor: 'rgb(37, 37, 37)'}}>
       <h1>Notes</h1>
       <div className="addNotes">
         <Search color="#fff" onClick={changeState} className="hover"/>

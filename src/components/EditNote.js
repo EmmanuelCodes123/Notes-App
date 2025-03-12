@@ -11,7 +11,7 @@ export function EditNote() {
   const editableNote = notes.find((n) => n.id === Number(noteId))
   
   const colors = ["orange", "blue", "green", "red", "orange"];
-  const [color, setColor] = useState('orange');
+  const [color, setColor] = useState(`${editableNote.color}`);
   const [border, setBorder] = useState('');
 
   const { handleNavigate } = useCustomNavigate();
@@ -56,7 +56,7 @@ export function EditNote() {
                 width: "25%",
                 height: "100%",
                 backgroundColor: `${colors[num]}`,
-                borderRadius: '10rem'
+                borderRadius: '50%'
               }}
               onClick={() => {
                 setColor(colors[num]);

@@ -56,7 +56,7 @@ export function NoteForm() {
                 width: "25%",
                 height: "100%",
                 backgroundColor: `${colors[num]}`,
-                borderRadius: '10rem'
+                borderRadius: '50%'
               }}
               onClick={() => {
                 setColor(colors[num]);
