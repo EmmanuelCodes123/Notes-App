@@ -320,8 +320,11 @@ form{
   
   .inputBox{
     display: flex;
-    padding-inline: 1rem;
-    align-items: center
+    column-gap: 1rem;
+    padding-right: 3rem
+  }
+  .icon{
+    margin: none
   }
 
   .button{
@@ -342,27 +345,30 @@ form{
     border-radius: none;
   }
 
+  .searchContainer{
+    overflow-x: hidden
+  }
   .newWrapper{
     width: 100vw;
     height: 100vh;
   }
-
   .noteBox{
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-  }
-  .note{
-    width: 50%;
+    justify-content: center;
+    column-gap: 4.4rem
   }
 
+  .searchedNote{
+    width: 50%;
+    
+  }
   .searchedNotes{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     justify-content: center;
   }
 
+  
 }
 
 @media only screen and (height <= 900px) and (height >= 800px) {

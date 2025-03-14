@@ -15,7 +15,6 @@ export function SearchFunction({ deleteNoteFunction }) {
       note.title.toLowerCase().includes(search.toLowerCase())
     );
     setSearchedNotes(matchedNotes);
-    
   }
 
   return (
@@ -57,9 +56,9 @@ export function SearchFunction({ deleteNoteFunction }) {
               }}
               onClick={() => {
                 handleNavigate(`/readNote/${note.id}`);
-                console.log('at once')
+                console.log("at once");
               }}
-              className="note"
+              className="searchedNote"
             >
               <h1 style={{ fontSize: " 2rem" }}>{note.title}</h1>
               <p style={{ fontSize: " 1.5rem", color: "#eee6" }}>
