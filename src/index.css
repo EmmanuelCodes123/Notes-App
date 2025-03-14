@@ -172,7 +172,9 @@ button {
 }
 
 
-
+form{
+  position: relative
+}
 
 .saveBtn {
   background-color: rgb(110, 110, 110);
@@ -180,6 +182,9 @@ button {
   padding: 1rem;
   font-size: 1.5rem;
   width: fit-content;
+  position: absolute;
+  right: 0rem;
+  bottom: -6rem
 }
 
 .addButton {
@@ -307,6 +312,21 @@ button {
     display: flex;
     padding-inline: 1rem;
     align-items: center
+  }
+
+  .button{
+    right: 2rem
+  }
+
+  .noteArea{
+    height: 100vh;
+    width: 100%;
+    margin-top: initial;
+    border-radius: initial
+  }
+
+  .saveBtn{
+    bottom: -35rem
   }
 }
 
