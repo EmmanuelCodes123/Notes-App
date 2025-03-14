@@ -369,7 +369,17 @@ form{
     justify-content: center;
   }
 
-  
+  .readNote{
+    width: 100vw;
+    height: 100vh;
+    padding-inline: 2rem;
+    padding-block: 2rem;
+    border-radius: initial;
+    margin-top: 0;
+  }
+  .readNote .icons{
+    margin-left: -1rem;
+  }
 }
 
 @media only screen and (height <= 900px) and (height >= 800px) {
