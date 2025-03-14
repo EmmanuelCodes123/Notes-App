@@ -346,7 +346,8 @@ form{
   }
 
   .searchContainer{
-    overflow-x: hidden
+    overflow-x: hidden;
+    padding-inline: 1rem;
   }
   .newWrapper{
     width: 100vw;
