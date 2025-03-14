@@ -182,9 +182,15 @@ form{
   padding: 1rem;
   font-size: 1.5rem;
   width: fit-content;
-  position: absolute;
-  right: 0rem;
-  bottom: -6rem
+}
+
+.saveBtnDiv{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 1rem;
 }
 
 .addButton {
@@ -324,9 +330,34 @@ form{
     margin-top: initial;
     border-radius: initial
   }
+  .wrapper::-webkit-scrollbar {
+    width: initial
+  }
+  .wrapper::-webkit-scrollbar-thumb {
+    background: none;
+    border-radius: none;
+  }
 
-  .saveBtn{
-    bottom: -35rem
+}
+
+@media only screen and (height <= 900px) and (height >= 800px) {
+  .saveBtnDiv{
+    margin-top: 27rem
+  }
+}
+@media only screen and (height <= 800px) and (height >=700px){
+  .saveBtnDiv{
+    margin-top: 20rem
+  }
+}
+@media only screen and (height <= 700px) and (height >= 600px){
+  .saveBtnDiv{
+    margin-top: 12rem
+  }
+}
+@media only screen and (height >= 900px){
+  .saveBtnDiv{
+    margin-top: 35rem
   }
 }
 

@@ -12,8 +12,8 @@ export function NoteForm() {
   const editableNote = notes.find((n) => n?.id === noteId);
   const [title, setTitle] = useState(editableNote?.title || "");
   const [body, setBody] = useState(editableNote?.body || "");
-  const [color, setColor] = useState('orange');
-  const [border, setBorder] = useState('')
+  const [color, setColor] = useState("orange");
+  const [border, setBorder] = useState("");
   const { handleNavigate } = useCustomNavigate();
   const colors = ["orange", "blue", "green", "red", "orange"];
 
@@ -46,21 +46,20 @@ export function NoteForm() {
             height: "6rem",
             display: "flex",
             columnGap: "1rem",
-            
           }}
         >
           {Array.from({ length: 4 }, (_, i) => i + 1).map((num) => (
             <div
-              className={`hover ${border === num ? 'active' : ""}`}
+              className={`hover ${border === num ? "active" : ""}`}
               style={{
                 width: "25%",
                 height: "100%",
                 backgroundColor: `${colors[num]}`,
-                borderRadius: '50%'
+                borderRadius: "50%",
               }}
               onClick={() => {
                 setColor(colors[num]);
-                setBorder(num)
+                setBorder(num);
               }}
             ></div>
           ))}
@@ -82,7 +81,9 @@ export function NoteForm() {
           onChange={(e) => setBody(e.target.value)}
           style={{ minHeight: "12rem" }}
         ></textarea>
-        <button className="saveBtn hover">Save</button>
+        <div className="saveBtnDiv">
+          <button className="saveBtn hover">Save</button>
+        </div>
       </form>
     </div>
   );
