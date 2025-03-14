@@ -54,12 +54,12 @@ export function SearchFunction({ deleteNoteFunction }) {
                 justifyContent: "flex-end",
                 display: "flex",
                 flexDirection: "column",
-                width: '80%'
               }}
               onClick={() => {
                 handleNavigate(`/readNote/${note.id}`);
                 console.log('at once')
               }}
+              className="note"
             >
               <h1 style={{ fontSize: " 2rem" }}>{note.title}</h1>
               <p style={{ fontSize: " 1.5rem", color: "#eee6" }}>

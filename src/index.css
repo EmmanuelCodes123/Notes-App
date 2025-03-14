@@ -219,6 +219,10 @@ form{
   justify-content: space-between;
 }
 
+.note{
+  width: 80%;
+}
+
 .search{
   background-color: white;
   border-radius: 0.4rem;
@@ -336,6 +340,27 @@ form{
   .wrapper::-webkit-scrollbar-thumb {
     background: none;
     border-radius: none;
+  }
+
+  .newWrapper{
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .noteBox{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .note{
+    width: 50%;
+  }
+
+  .searchedNotes{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
   }
 
 }
